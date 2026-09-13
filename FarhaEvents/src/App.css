@@ -1,12 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap");
+
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 :root {
-  --black: #0d0d0d;
-  --cream: #f5f0e8;
-  --cream-dark: #e8dfd2;
-  --white: #fff;
-  --gray: #777;
-  --gold: #c8b08d;
+  --black: #0b0b0b;
+  --cream: #f4f1eb;
+  --cream-dark: #e9e2d9;
+  --white: #ffffff;
+  --gray: #777777;
 }
 
 * {
@@ -15,14 +18,25 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--cream);
-  color: var(--black);
-  font-family: "Montserrat", sans-serif;
+  color: #111;
+
+  font-family: "DM Sans", sans-serif;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -39,773 +53,1180 @@ button,
 input,
 textarea,
 select {
-  font: inherit;
+  font-family: "DM Sans", sans-serif;
 }
 
-/* NAV */
+
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 .navbar {
   position: absolute;
-  z-index: 10;
+
   top: 0;
   left: 0;
 
+  z-index: 50;
+
   width: 100%;
-  padding: 28px 6%;
+
+  padding: 30px 5.5%;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   color: white;
 }
 
+
+/* FARHA EVENTS LOGO */
+
 .logo {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 32px;
+  font-family: "Manrope", sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  text-transform: uppercase;
+
   letter-spacing: 5px;
+
+  white-space: nowrap;
+
+  color: white;
 }
+
+
+/* NAV LINKS */
 
 .navLinks {
   display: flex;
-  gap: 24px;
+
   align-items: center;
 
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 10px;
+  gap: 28px;
 }
 
 .navLinks a {
-  transition: opacity 0.25s;
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.6px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .navLinks a:hover {
-  opacity: 0.65;
+  color: white;
 }
 
-.navButton {
-  border: 1px solid white;
-  padding: 13px 18px;
+
+/* BOOK YOUR DATE NAV BUTTON */
+
+.navLinks .navButton {
+  padding: 13px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.62);
+
+  color: white;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
-/* HERO */
+.navLinks .navButton:hover {
+  background: white;
 
-.hero {
+  color: #111;
+
+  border-color: white;
+}
+
+
+/* =========================================================
+   HOMEPAGE
+========================================================= */
+
+.homePage {
+  width: 100%;
+}
+
+
+/* =========================================================
+   HOMEPAGE HERO
+========================================================= */
+
+.modernHero {
+  position: relative;
+
+  width: 100%;
+
   height: 100vh;
+
   min-height: 720px;
 
-  position: relative;
-
-  background-image: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=90");
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 
   color: white;
-  text-align: center;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=95");
+
+  background-size: cover;
+
+  background-position: center 42%;
+
+  background-repeat: no-repeat;
 }
 
-.heroOverlay {
+
+/* HOMEPAGE DARK OVERLAY */
+
+.modernHeroOverlay {
   position: absolute;
+
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 5, 0.78) 0%,
+      rgba(5, 5, 5, 0.57) 30%,
+      rgba(5, 5, 5, 0.25) 58%,
+      rgba(5, 5, 5, 0.06) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.34) 0%,
+      rgba(0, 0, 0, 0) 45%
+    );
 }
 
-.heroContent {
-  position: relative;
-  z-index: 2;
 
-  width: 90%;
-  max-width: 1100px;
+/* =========================================================
+   HOMEPAGE HERO CONTENT
+========================================================= */
+
+.modernHeroContent {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 50%;
+
+  left: 8%;
+
+  transform: translateY(-50%);
+
+  width: 620px;
+
+  max-width: 80%;
 }
 
-.eyebrow {
-  font-size: 10px;
-  letter-spacing: 4px;
+
+/* SMALL TOP LABEL */
+
+.modernEyebrow {
+  margin-bottom: 22px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
   text-transform: uppercase;
-  margin-bottom: 24px;
+
+  letter-spacing: 3.4px;
+
+  color: rgba(255, 255, 255, 0.68);
 }
 
-.darkEyebrow {
-  color: #716b64;
+
+/* MAIN HOMEPAGE HEADING */
+
+.modernHeroContent h1 {
+  max-width: 700px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(58px, 6vw, 91px);
+
+  font-weight: 300;
+
+  line-height: 0.99;
+
+  letter-spacing: -4px;
+
+  color: white;
 }
 
-.hero h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(55px, 8.5vw, 120px);
-  font-weight: 400;
-  line-height: 0.87;
+
+/* HOMEPAGE DESCRIPTION */
+
+.modernHeroDescription {
+  width: 470px;
+
+  max-width: 100%;
+
+  margin-top: 28px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.72);
 }
 
-.heroServices {
-  margin: 35px 0;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
 
-.heroButtons {
+/* =========================================================
+   HOMEPAGE BUTTONS
+========================================================= */
+
+.modernHeroButtons {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 34px;
 }
 
-.button {
+
+/* EXPLORE EXPERIENCES */
+
+.modernPrimaryButton {
+  min-width: 190px;
+
   padding: 16px 25px;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: white;
+
+  color: #111;
 
   border: 1px solid white;
 
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  transition: 0.3s;
-}
-
-.lightButton {
-  background: white;
-  color: black;
-}
-
-.lightButton:hover {
-  background: transparent;
-  color: white;
-}
-
-.outlineButton:hover {
-  background: white;
-  color: black;
-}
-
-.scroll {
-  position: absolute;
-  z-index: 2;
-
-  bottom: 28px;
+  font-family: "DM Sans", sans-serif;
 
   font-size: 9px;
-  letter-spacing: 3px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.7px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.modernPrimaryButton:hover {
+  background: transparent;
+
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+
+/* BOOK YOUR DATE */
+
+.modernSecondaryButton {
+  min-width: 170px;
+
+  padding: 16px 25px;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.58);
+
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.7px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.modernSecondaryButton:hover {
+  background: white;
+
+  color: #111;
+
+  border-color: white;
+}
+
+
+/* OLD TEXT BUTTON SUPPORT */
+
+.modernTextButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.4px;
+}
+
+.modernTextButton span {
+  font-size: 16px;
+
+  transition: transform 0.25s ease;
+}
+
+.modernTextButton:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   HOMEPAGE BOTTOM TEXT
+========================================================= */
+
+.heroBottomText {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 8%;
+
+  bottom: 32px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2.5px;
+
+  color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* =========================================================
+   REMOVE OLD HOMEPAGE SERVICE ROW
+========================================================= */
+
+.modernServices {
+  display: none;
+}
+
+
+/* =========================================================
+   INTERNAL PAGE HERO
+========================================================= */
+
+.pageHero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 80vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  color: white;
+
+  text-align: center;
+}
+
+
+/* INTERNAL HERO OVERLAY */
+
+.pageOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.40),
+      rgba(0, 0, 0, 0.24),
+      rgba(0, 0, 0, 0.36)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.34),
+      rgba(0, 0, 0, 0.1)
+    );
+}
+
+
+/* INTERNAL HERO CONTENT */
+
+.pageHeroContent {
+  position: relative;
+
+  z-index: 5;
+
+  width: 90%;
+
+  max-width: 1000px;
+
+  padding-top: 75px;
+}
+
+
+/* INTERNAL HERO SMALL LABEL */
+
+.pageHeroContent .eyebrow {
+  margin-bottom: 22px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 3.5px;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* INTERNAL HERO TITLE */
+
+.pageHeroContent h1 {
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(58px, 7vw, 96px);
+
+  font-weight: 300;
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+}
+
+
+/* INTERNAL HERO SUBTITLE */
+
+.pageHeroContent > p:last-child {
+  margin-top: 28px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   INTERNAL PAGE HERO IMAGES
+========================================================= */
+
+/* VOGUE BOX */
+
+.vogueHero {
+  background-image:
+    url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2200&q=90");
+}
+
+
+/* 360 */
+
+.experienceHero {
+  background-image:
+    url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90");
+}
+
+
+/* WEDDING CONTENT */
+
+.contentHero {
+  background-image:
+    url("https://images.unsplash.com/photo-1460978812857-470ed1c77af0?auto=format&fit=crop&w=2200&q=90");
+}
+
+
+/* FEATURED WEDDINGS */
+
+.weddingsHero {
+  background-image:
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2200&q=90");
+}
+
+
+/* PACKAGES */
+
+.packagesHero {
+  background-image:
+    url("https://images.unsplash.com/photo-1519741347686-c1e331ec7f6e?auto=format&fit=crop&w=2200&q=90");
+}
+
+
+/* ABOUT */
+
+.aboutHero {
+  background-image:
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=90");
+}
+
+
+/* =========================================================
+   INTERNAL PAGE INTRO
+========================================================= */
+
+.pageIntro {
+  min-height: 560px;
+
+  padding: 110px 8%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  background: var(--cream);
+}
+
+
+/* SECTION LABEL */
+
+.sectionLabel {
+  margin-bottom: 20px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3.5px;
+
+  color: #858585;
+}
+
+
+/* SECTION TITLE */
+
+.pageIntro h2 {
+  max-width: 800px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(48px, 5.5vw, 76px);
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  color: #111;
+}
+
+
+/* DESCRIPTION */
+
+.pageDescription {
+  max-width: 630px;
+
+  margin-top: 30px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 2;
+
+  color: #555;
+}
+
+
+/* =========================================================
+   PACKAGES PAGE
+========================================================= */
+
+.packagesSection {
+  padding: 100px 6%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  background: var(--cream-dark);
+}
+
+
+/* PACKAGE CARD */
+
+.packageCard {
+  min-height: 420px;
+
+  padding: 38px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #faf7f2;
+}
+
+
+/* PACKAGE NUMBER */
+
+.packageCard > p:first-child {
+  font-family: "DM Sans", sans-serif;
+
+  color: #999;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+
+/* PACKAGE TITLE */
+
+.packageCard h3 {
+  margin-top: 28px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 31px;
+
+  font-weight: 300;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+
+/* PACKAGE DESCRIPTION */
+
+.packageCard > p:nth-child(3) {
+  margin-top: 20px;
+
+  flex: 1;
+
+  color: #555;
+
+  font-size: 12px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+}
+
+
+/* PACKAGE LINK */
+
+.packageCard a {
+  width: fit-content;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+
   text-transform: uppercase;
 }
 
-/* GLOBAL SECTIONS */
 
-.section {
-  padding: 110px 7%;
-}
+/* DARK COMPLETE PACKAGE */
 
-.section h2,
-.intro h2,
-.about h2,
-.contact h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-  font-size: clamp(50px, 6vw, 80px);
-  line-height: 1;
-}
+.darkPackage {
+  background: #101010;
 
-/* INTRO */
-
-.intro {
-  padding: 130px 7%;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.intro p:last-child {
-  margin-top: 30px;
-  max-width: 680px;
-
-  font-size: 14px;
-  color: #595959;
-  line-height: 2;
-}
-
-/* EXPERIENCES */
-
-.experiences {
-  background: var(--black);
   color: white;
 }
 
-.service {
-  min-height: 700px;
+.darkPackage > p:nth-child(3) {
+  color: #aaa;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contactPage {
+  position: relative;
+
+  min-height: 100vh;
+
+  background: #101010;
+
+  color: white;
+}
+
+
+/* CONTACT GRID */
+
+.contactContent {
+  min-height: 100vh;
+
+  padding: 160px 8% 80px;
 
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 100px;
 }
 
-.service.reverse .serviceImage {
-  order: 2;
+
+/* CONTACT HEADING */
+
+.contactText h1 {
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(55px, 6vw, 90px);
+
+  font-weight: 300;
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
 }
 
-.serviceImage {
-  overflow: hidden;
-}
 
-.serviceImage img {
-  height: 100%;
-  object-fit: cover;
+/* CONTACT DESCRIPTION */
 
-  transition: transform 0.8s ease;
-}
+.contactText > p:last-child {
+  max-width: 500px;
 
-.service:hover img {
-  transform: scale(1.035);
-}
+  margin-top: 28px;
 
-.serviceContent {
-  padding: 10%;
+  color: #aaa;
 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+  font-family: "DM Sans", sans-serif;
 
-.serviceNumber {
-  margin-bottom: 25px;
-
-  color: var(--gold);
-
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.serviceContent h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(50px, 5vw, 75px);
-  font-weight: 400;
-
-  margin-bottom: 25px;
-}
-
-.serviceContent p {
-  color: #bcbcbc;
-  line-height: 2;
-
-  max-width: 520px;
   font-size: 13px;
 
-  margin-bottom: 32px;
+  font-weight: 300;
+
+  line-height: 2;
 }
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.bookingForm {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* INPUTS */
+
+.bookingForm input,
+.bookingForm select,
+.bookingForm textarea {
+  width: 100%;
+
+  padding: 17px 5px;
+
+  border: none;
+
+  border-bottom: 1px solid #555;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+}
+
+.bookingForm input::placeholder,
+.bookingForm textarea::placeholder {
+  color: #777;
+}
+
+
+/* SELECT */
+
+.bookingForm select {
+  cursor: pointer;
+}
+
+.bookingForm select option {
+  color: black;
+  background: white;
+}
+
+
+/* MESSAGE BOX */
+
+.bookingForm textarea {
+  min-height: 130px;
+
+  resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+.bookingForm button {
+  margin-top: 18px;
+
+  padding: 17px;
+
+  border: 1px solid white;
+
+  background: white;
+
+  color: black;
+
+  cursor: pointer;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.bookingForm button:hover {
+  background: transparent;
+
+  color: white;
+}
+
+
+/* =========================================================
+   GENERIC TEXT LINK
+========================================================= */
 
 .textLink {
   display: inline-block;
 
   width: fit-content;
 
-  padding-bottom: 6px;
+  padding-bottom: 5px;
+
   border-bottom: 1px solid currentColor;
 
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.darkLink {
-  color: #292929;
-}
-
-/* WEDDINGS */
-
-.sectionHeading {
-  margin-bottom: 50px;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
-  gap: 20px;
-}
-
-.weddingGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.weddingCard {
-  height: 620px;
-  position: relative;
-  overflow: hidden;
-}
-
-.weddingCard img {
-  height: 100%;
-  object-fit: cover;
-
-  transition: transform 0.5s;
-}
-
-.weddingCard:hover img {
-  transform: scale(1.04);
-}
-
-.weddingOverlay {
-  position: absolute;
-  inset: 0;
-
-  padding: 30px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  color: white;
-
-  background: linear-gradient(
-    transparent 40%,
-    rgba(0, 0, 0, 0.72)
-  );
-}
-
-.weddingOverlay h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
-  font-weight: 400;
-}
-
-.weddingOverlay p {
-  margin-top: 6px;
+  font-family: "DM Sans", sans-serif;
 
   font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
 
-/* PACKAGES */
+  font-weight: 500;
 
-.packages {
-  background: var(--cream-dark);
-}
-
-.centerHeading {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.packageGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 15px;
-}
-
-.packageCard {
-  background: var(--cream);
-
-  padding: 40px 30px;
-
-  min-height: 410px;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.featuredPackage {
-  background: var(--black);
-  color: white;
-}
-
-.packageCard h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 34px;
-  font-weight: 400;
-}
-
-.packageCard > span {
-  margin: 12px 0 30px;
-
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  color: #777;
-}
-
-.featuredPackage > span {
-  color: #aaa;
-}
-
-.packageCard ul {
-  list-style: none;
-  flex: 1;
-
-  font-size: 12px;
-  line-height: 2.4;
-}
-
-.packageCard li::before {
-  content: "—";
-  margin-right: 7px;
-}
-
-/* REVIEWS */
-
-.reviewSection {
-  padding: 130px 7%;
-
-  text-align: center;
-  background: var(--black);
-  color: white;
-}
-
-.stars {
-  color: var(--gold);
-  letter-spacing: 7px;
-
-  margin-bottom: 30px;
-}
-
-.reviewSection blockquote {
-  max-width: 950px;
-  margin: auto;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(35px, 5vw, 60px);
-  line-height: 1.2;
-}
-
-.reviewName {
-  margin-top: 35px;
-
-  color: #8f8f8f;
-
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-/* ABOUT */
-
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-  align-items: center;
-}
-
-.aboutImage img {
-  height: 700px;
-  object-fit: cover;
-}
-
-.aboutContent > p:not(.eyebrow) {
-  margin-top: 25px;
-
-  line-height: 2;
-  font-size: 13px;
-  color: #555;
-}
-
-.aboutContent .textLink {
-  margin-top: 30px;
-}
-
-/* CTA */
-
-.cta {
-  min-height: 80vh;
-
-  position: relative;
-
-  background-image: url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2200&q=90");
-  background-position: center;
-  background-size: cover;
-
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
-.ctaOverlay {
-  position: absolute;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.ctaContent {
-  position: relative;
-  z-index: 2;
-}
-
-.cta h2 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(60px, 8vw, 110px);
-  font-weight: 400;
-  line-height: 0.88;
-}
-
-.ctaContent > p:not(.eyebrow) {
-  margin: 30px 0;
+  letter-spacing: 1.6px;
 
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 10px;
 }
 
-/* CONTACT */
 
-.contact {
-  background: #ede5dc;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-}
-
-.contactIntro > p:not(.eyebrow) {
-  color: #555;
-
-  line-height: 2;
-  font-size: 13px;
-
-  margin-top: 25px;
-
-  max-width: 550px;
-}
-
-.contactForm {
-  display: flex;
-  flex-direction: column;
-
-  gap: 20px;
-}
-
-.formRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 20px;
-}
-
-.contactForm input,
-.contactForm textarea,
-.contactForm select {
-  width: 100%;
-
-  border: none;
-  border-bottom: 1px solid #a49687;
-
-  background: transparent;
-
-  padding: 16px 5px;
-
-  outline: none;
-}
-
-.contactForm textarea {
-  resize: vertical;
-  min-height: 130px;
-}
-
-.contactForm button {
-  border: none;
-  background: black;
-  color: white;
-
-  padding: 18px;
-
-  cursor: pointer;
-
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* FOOTER */
-
-footer {
-  padding: 70px 7% 30px;
-
-  background: var(--black);
-  color: white;
-}
-
-.footerTop {
-  display: flex;
-  justify-content: space-between;
-
-  gap: 60px;
-
-  margin-bottom: 60px;
-}
-
-.footerLogo {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 48px;
-  letter-spacing: 4px;
-}
-
-.footerTop > div:first-child p {
-  margin-top: 8px;
-
-  color: #777;
-
-  font-size: 10px;
-}
-
-.footerLinks {
-  display: flex;
-  gap: 80px;
-}
-
-.footerLinks > div {
-  display: flex;
-  flex-direction: column;
-
-  gap: 11px;
-}
-
-.footerLinks strong {
-  margin-bottom: 10px;
-
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.footerLinks a {
-  font-size: 11px;
-  color: #949494;
-}
-
-.footerBottom {
-  border-top: 1px solid #333;
-
-  padding-top: 25px;
-
-  display: flex;
-  justify-content: space-between;
-
-  font-size: 9px;
-  letter-spacing: 1px;
-  color: #666;
-}
-
-/* RESPONSIVE */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1050px) {
+
+  .navbar {
+    padding: 25px 5%;
+  }
+
+  .navLinks {
+    gap: 16px;
+  }
+
   .navLinks a:not(.navButton) {
     display: none;
   }
 
-  .service {
-    grid-template-columns: 1fr;
+  .modernHeroContent {
+    left: 6%;
   }
 
-  .service.reverse .serviceImage {
-    order: 0;
+  .heroBottomText {
+    left: 6%;
   }
 
-  .serviceImage {
-    height: 550px;
-  }
-
-  .packageGrid {
+  .packagesSection {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about,
-  .contact {
+  .contactContent {
     grid-template-columns: 1fr;
+
+    gap: 65px;
   }
+
 }
 
-@media (max-width: 750px) {
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* NAV */
+
   .navbar {
-    padding: 20px 5%;
+    padding: 22px 5%;
   }
 
   .logo {
-    font-size: 26px;
+    font-size: 15px;
+
+    letter-spacing: 3px;
   }
 
-  .navButton {
+  .navLinks .navButton {
+    padding: 10px 12px;
+
+    font-size: 7px;
+  }
+
+
+  /* HOMEPAGE */
+
+  .modernHero {
+    min-height: 100svh;
+
+    background-position: 59% center;
+  }
+
+  .modernHeroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 5, 5, 0.82),
+        rgba(5, 5, 5, 0.27)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(5, 5, 5, 0.42),
+        transparent
+      );
+  }
+
+  .modernHeroContent {
+    top: 48%;
+
+    left: 6%;
+
+    width: 88%;
+
+    max-width: none;
+  }
+
+  .modernEyebrow {
     font-size: 8px;
-    padding: 10px 13px;
+
+    letter-spacing: 2.5px;
   }
 
-  .hero h1 {
-    font-size: 55px;
+  .modernHeroContent h1 {
+    font-size: 50px;
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
   }
 
-  .heroServices {
-    font-size: 9px;
-    line-height: 2;
+  .modernHeroDescription {
+    max-width: 340px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
   }
 
-  .section,
-  .intro {
-    padding: 80px 6%;
-  }
+  .modernHeroButtons {
+    flex-direction: column;
 
-  .serviceImage {
-    height: 420px;
-  }
-
-  .serviceContent {
-    padding: 70px 8%;
-  }
-
-  .weddingGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .weddingCard {
-    height: 520px;
-  }
-
-  .sectionHeading {
     align-items: flex-start;
-    flex-direction: column;
-  }
 
-  .packageGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .about {
-    gap: 40px;
-  }
-
-  .aboutImage img {
-    height: 500px;
-  }
-
-  .formRow {
-    grid-template-columns: 1fr;
-  }
-
-  .footerTop {
-    flex-direction: column;
-  }
-
-  .footerLinks {
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .footerBottom {
-    flex-direction: column;
     gap: 10px;
   }
+
+  .modernPrimaryButton,
+  .modernSecondaryButton {
+    min-width: 205px;
+  }
+
+  .heroBottomText {
+    left: 6%;
+
+    bottom: 22px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.7px;
+  }
+
+
+  /* INTERNAL PAGES */
+
+  .pageHero {
+    min-height: 75vh;
+  }
+
+  .pageHeroContent {
+    padding-top: 60px;
+  }
+
+  .pageHeroContent h1 {
+    font-size: 52px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+  }
+
+  .pageHeroContent > p:last-child {
+    font-size: 8px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .pageIntro {
+    min-height: auto;
+
+    padding: 85px 7%;
+  }
+
+  .pageIntro h2 {
+    font-size: 46px;
+
+    letter-spacing: -2px;
+  }
+
+  .pageDescription {
+    font-size: 12px;
+  }
+
+
+  /* PACKAGES */
+
+  .packagesSection {
+    grid-template-columns: 1fr;
+
+    padding: 70px 5%;
+  }
+
+
+  /* CONTACT */
+
+  .contactContent {
+    padding: 135px 6% 70px;
+  }
+
+  .contactText h1 {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
 }
