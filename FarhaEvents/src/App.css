@@ -31,6 +31,7 @@ html {
 
 body {
   margin: 0;
+
   background: var(--cream);
   color: #111;
 
@@ -81,13 +82,12 @@ select {
 }
 
 
-/* FARHA EVENTS LOGO */
+/* FARHA EVENTS */
 
 .logo {
   font-family: "Manrope", sans-serif;
 
   font-size: 20px;
-
   font-weight: 400;
 
   text-transform: uppercase;
@@ -114,7 +114,6 @@ select {
   font-family: "DM Sans", sans-serif;
 
   font-size: 9px;
-
   font-weight: 500;
 
   text-transform: uppercase;
@@ -133,7 +132,7 @@ select {
 }
 
 
-/* BOOK YOUR DATE NAV BUTTON */
+/* BOOK YOUR DATE */
 
 .navLinks .navButton {
   padding: 13px 20px;
@@ -194,7 +193,7 @@ select {
 }
 
 
-/* HOMEPAGE DARK OVERLAY */
+/* DARK OVERLAY */
 
 .modernHeroOverlay {
   position: absolute;
@@ -248,7 +247,6 @@ select {
   font-family: "DM Sans", sans-serif;
 
   font-size: 9px;
-
   font-weight: 500;
 
   text-transform: uppercase;
@@ -314,7 +312,7 @@ select {
 }
 
 
-/* EXPLORE EXPERIENCES */
+/* PRIMARY BUTTON */
 
 .modernPrimaryButton {
   min-width: 190px;
@@ -324,7 +322,6 @@ select {
   display: inline-flex;
 
   justify-content: center;
-
   align-items: center;
 
   background: white;
@@ -358,7 +355,7 @@ select {
 }
 
 
-/* BOOK YOUR DATE */
+/* SECONDARY BUTTON */
 
 .modernSecondaryButton {
   min-width: 170px;
@@ -368,7 +365,6 @@ select {
   display: inline-flex;
 
   justify-content: center;
-
   align-items: center;
 
   background: transparent;
@@ -402,40 +398,7 @@ select {
 }
 
 
-/* OLD TEXT BUTTON SUPPORT */
-
-.modernTextButton {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 9px;
-
-  color: white;
-
-  font-size: 10px;
-
-  font-weight: 500;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1.4px;
-}
-
-.modernTextButton span {
-  font-size: 16px;
-
-  transition: transform 0.25s ease;
-}
-
-.modernTextButton:hover span {
-  transform: translate(3px, -3px);
-}
-
-
-/* =========================================================
-   HOMEPAGE BOTTOM TEXT
-========================================================= */
+/* HOMEPAGE BOTTOM TEXT */
 
 .heroBottomText {
   position: absolute;
@@ -460,9 +423,7 @@ select {
 }
 
 
-/* =========================================================
-   REMOVE OLD HOMEPAGE SERVICE ROW
-========================================================= */
+/* REMOVE OLD SERVICES ROW */
 
 .modernServices {
   display: none;
@@ -483,7 +444,6 @@ select {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   overflow: hidden;
@@ -539,7 +499,7 @@ select {
 }
 
 
-/* INTERNAL HERO SMALL LABEL */
+/* SMALL LABEL */
 
 .pageHeroContent .eyebrow {
   margin-bottom: 22px;
@@ -596,47 +556,30 @@ select {
    INTERNAL PAGE HERO IMAGES
 ========================================================= */
 
-/* VOGUE BOX */
-
 .vogueHero {
   background-image:
     url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2200&q=90");
 }
-
-
-/* 360 */
 
 .experienceHero {
   background-image:
     url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90");
 }
 
-
-/* WEDDING CONTENT */
-
 .contentHero {
   background-image:
     url("https://images.unsplash.com/photo-1460978812857-470ed1c77af0?auto=format&fit=crop&w=2200&q=90");
 }
-
-
-/* FEATURED WEDDINGS */
 
 .weddingsHero {
   background-image:
     url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2200&q=90");
 }
 
-
-/* PACKAGES */
-
 .packagesHero {
   background-image:
     url("https://images.unsplash.com/photo-1519741347686-c1e331ec7f6e?auto=format&fit=crop&w=2200&q=90");
 }
-
-
-/* ABOUT */
 
 .aboutHero {
   background-image:
@@ -645,7 +588,7 @@ select {
 
 
 /* =========================================================
-   INTERNAL PAGE INTRO
+   PAGE INTRO
 ========================================================= */
 
 .pageIntro {
@@ -658,7 +601,6 @@ select {
   flex-direction: column;
 
   justify-content: center;
-
   align-items: center;
 
   text-align: center;
@@ -686,7 +628,7 @@ select {
 }
 
 
-/* SECTION TITLE */
+/* PAGE INTRO TITLE */
 
 .pageIntro h2 {
   max-width: 800px;
@@ -705,7 +647,7 @@ select {
 }
 
 
-/* DESCRIPTION */
+/* PAGE DESCRIPTION */
 
 .pageDescription {
   max-width: 630px;
@@ -822,7 +764,7 @@ select {
 }
 
 
-/* DARK COMPLETE PACKAGE */
+/* DARK PACKAGE */
 
 .darkPackage {
   background: #101010;
@@ -850,7 +792,7 @@ select {
 }
 
 
-/* CONTACT GRID */
+/* CONTACT LAYOUT */
 
 .contactContent {
   min-height: 100vh;
@@ -867,7 +809,7 @@ select {
 }
 
 
-/* CONTACT HEADING */
+/* CONTACT TEXT */
 
 .contactText h1 {
   font-family: "Manrope", sans-serif;
@@ -880,9 +822,6 @@ select {
 
   letter-spacing: -4px;
 }
-
-
-/* CONTACT DESCRIPTION */
 
 .contactText > p:last-child {
   max-width: 500px;
@@ -902,7 +841,7 @@ select {
 
 
 /* =========================================================
-   CONTACT FORM
+   BOOKING FORM
 ========================================================= */
 
 .bookingForm {
@@ -938,6 +877,9 @@ select {
   font-size: 12px;
 }
 
+
+/* PLACEHOLDERS */
+
 .bookingForm input::placeholder,
 .bookingForm textarea::placeholder {
   color: #777;
@@ -952,11 +894,12 @@ select {
 
 .bookingForm select option {
   color: black;
+
   background: white;
 }
 
 
-/* MESSAGE BOX */
+/* MESSAGE AREA */
 
 .bookingForm textarea {
   min-height: 130px;
@@ -997,6 +940,90 @@ select {
   background: transparent;
 
   color: white;
+}
+
+
+/* DISABLED SUBMIT */
+
+.bookingForm button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   CONTACT DATE FIELD
+========================================================= */
+
+.formField {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.formField label {
+  margin-bottom: 4px;
+
+  color: #777;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.formSuccess {
+  margin-top: 10px;
+
+  padding: 18px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  color: white;
+}
+
+.formSuccess strong {
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.formSuccess span {
+  color: #aaa;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.formError {
+  margin-top: 10px;
+
+  color: #d7a5a5;
+
+  font-size: 12px;
 }
 
 
@@ -1070,7 +1097,7 @@ select {
 
 @media (max-width: 700px) {
 
-  /* NAV */
+  /* NAVBAR */
 
   .navbar {
     padding: 22px 5%;
