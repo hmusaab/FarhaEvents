@@ -27,6 +27,8 @@ body,
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -1100,6 +1102,8 @@ select {
   /* NAVBAR */
 
   .navbar {
+    flex-wrap: wrap;
+    row-gap: 12px;
     padding: 22px 5%;
   }
 
@@ -1107,6 +1111,11 @@ select {
     font-size: 15px;
 
     letter-spacing: 3px;
+  }
+
+  .navLinks {
+    margin-left: auto;
+    gap: 8px;
   }
 
   .navLinks .navButton {
@@ -1165,6 +1174,8 @@ select {
   .modernHeroDescription {
     max-width: 340px;
 
+    width: 100%;
+
     font-size: 12px;
 
     line-height: 1.7;
@@ -1181,6 +1192,8 @@ select {
   .modernPrimaryButton,
   .modernSecondaryButton {
     min-width: 205px;
+    width: 100%;
+    max-width: 240px;
   }
 
   .heroBottomText {
@@ -1256,4 +1269,36 @@ select {
     letter-spacing: -2px;
   }
 
+}
+
+@media (max-width: 430px) {
+  .navbar {
+    padding-top: 18px;
+  }
+
+  .logo {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .navLinks .navButton {
+    font-size: 6px;
+    padding: 8px 10px;
+  }
+
+  .modernHeroContent h1,
+  .pageHeroContent h1,
+  .contactText h1 {
+    font-size: 42px;
+    letter-spacing: -1.8px;
+  }
+
+  .pageIntro h2 {
+    font-size: 38px;
+  }
+
+  .packageCard {
+    min-height: 360px;
+    padding: 28px 22px;
+  }
 }
