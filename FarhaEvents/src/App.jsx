@@ -4,11 +4,11 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import VogueBox from "./pages/VogueBox";
 import Experience360 from "./pages/Experience360";
-import Content from "./pages/content";
+import Content from "./pages/Content";
 import Weddings from "./pages/Wedding";
-import Packages from "./pages/packages";
-import About from "./pages/about";
-import Contact from "./pages/contact";
+import Packages from "./pages/Packages";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 /* =========================================
    NAVBAR
