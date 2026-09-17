@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Navbar } from "../App";
 
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwHarheDwsL4Y-1knaruhInk9WuYwoG4MrUwtg5zqGYL0QUcJ9cDKYUoeOlsY93Lno/exec";
+  "https://script.google.com/macros/s/AKfycbxRLac6VTyS1OTOV3mYaNO97vwCwvd59L3JSQQ3qqK4_4414NUxhlfmj3BFCQYs1l_y/exec";
 
 function Contact() {
   const [submitting, setSubmitting] = useState(false);
