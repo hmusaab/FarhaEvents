@@ -1,4 +1,5 @@
 import { Navbar } from "../App";
+import "./Content.css";
 
 function Content() {
   return (

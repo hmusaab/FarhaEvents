@@ -1,4 +1,5 @@
 import { Navbar } from "../App";
+import "./VogueBox.css";
 
 function Vogue() {
   return (

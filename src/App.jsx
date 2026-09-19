@@ -1,6 +1,13 @@
 import "./App.css";
+import "./Footer.css";
 
-import { Routes, Route, Link } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
+import logoImage from "./FarhaEventsLogo.png";
 
 import VogueBox from "./pages/VogueBox";
 import Experience360 from "./pages/Experience360";
@@ -18,11 +25,18 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      <Link to="/" className="logo">
-        Farha Events
-      </Link>
+      <div className="logo">
+        <img
+          src={logoImage}
+          alt="Farha Events"
+        />
+      </div>
 
       <div className="navLinks">
+
+        <Link to="/">
+          Home
+        </Link>
 
         <Link to="/vogue">
           Vogue Box
@@ -58,6 +72,39 @@ function Navbar() {
       </div>
 
     </nav>
+  );
+}
+
+function Footer() {
+  const location = useLocation();
+
+  return (
+    <footer className="siteFooter">
+      <div className="siteFooterBrand">
+        <div className="siteFooterLogo">
+          <img
+            src={logoImage}
+            alt="Farha Events"
+          />
+        </div>
+
+        <p>
+          Wedding media & experiences.
+        </p>
+      </div>
+
+      {location.pathname !== "/contact" && (
+        <div className="siteFooterContact">
+          <span>
+            For more questions
+          </span>
+
+          <a href="mailto:book@eventswithfarha.com">
+            book@eventswithfarha.com
+          </a>
+        </div>
+      )}
+    </footer>
   );
 }
 
@@ -126,7 +173,8 @@ function Home() {
 
 function App() {
   return (
-    <Routes>
+    <>
+      <Routes>
 
       <Route
         path="/"
@@ -168,7 +216,10 @@ function App() {
         element={<Contact />}
       />
 
-    </Routes>
+      </Routes>
+
+      <Footer />
+    </>
   );
 }
 

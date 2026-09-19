@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "../App";
+import "./Contact.css";
 
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbxRLac6VTyS1OTOV3mYaNO97vwCwvd59L3JSQQ3qqK4_4414NUxhlfmj3BFCQYs1l_y/exec";
@@ -55,10 +56,20 @@ function Contact() {
             memorable.
           </h1>
 
-          <p>
+          <p className="contactDescription">
             Tell us a little about your celebration and which Farha
             experiences you're interested in. We'll get in touch to
             discuss availability and package options.
+          </p>
+
+          <p className="contactEmailPrompt">
+            For more questions, contact{" "}
+            <a
+              className="contactEmail"
+              href="mailto:book@eventswithfarha.com"
+            >
+              book@eventswithfarha.com
+            </a>
           </p>
         </div>
 
