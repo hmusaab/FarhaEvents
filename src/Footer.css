@@ -1,0 +1,68 @@
+.siteFooter {
+  padding: 52px 5.5% 34px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  background: #101010;
+  color: white;
+}
+
+.siteFooterBrand,
+.siteFooterContact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.siteFooterLogo {
+  display: block;
+  width: 185px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.siteFooterLogo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.siteFooter p,
+.siteFooterContact span {
+  color: #888;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.siteFooterContact {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.siteFooterContact a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.siteFooterContact a:hover {
+  border-color: white;
+  color: #ccc;
+}
+
+@media (max-width: 700px) {
+  .siteFooter {
+    padding: 42px 6% 28px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .siteFooterContact {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

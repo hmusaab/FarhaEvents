@@ -1,4 +1,5 @@
 import { Navbar } from "../App";
+import "./Experience360.css";
 
 function Experience360() {
   return (

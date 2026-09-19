@@ -87,18 +87,18 @@ select {
 /* FARHA EVENTS */
 
 .logo {
-  font-family: "Manrope", sans-serif;
+  display: block;
+  width: clamp(190px, 18vw, 270px);
+  max-width: 42vw;
+  overflow: hidden;
+  line-height: 0;
+  flex-shrink: 0;
+}
 
-  font-size: 20px;
-  font-weight: 400;
-
-  text-transform: uppercase;
-
-  letter-spacing: 5px;
-
-  white-space: nowrap;
-
-  color: white;
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
@@ -425,13 +425,6 @@ select {
 }
 
 
-/* REMOVE OLD SERVICES ROW */
-
-.modernServices {
-  display: none;
-}
-
-
 /* =========================================================
    INTERNAL PAGE HERO
 ========================================================= */
@@ -554,35 +547,6 @@ select {
 }
 
 
-/* =========================================================
-   INTERNAL PAGE HERO IMAGES
-========================================================= */
-
-.vogueHero {
-  background-image:
-    url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2200&q=90");
-}
-
-.experienceHero {
-  background-image:
-    url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90");
-}
-
-.contentHero {
-  background-image:
-    url("https://images.unsplash.com/photo-1460978812857-470ed1c77af0?auto=format&fit=crop&w=2200&q=90");
-}
-
-.weddingsHero {
-  background-image:
-    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2200&q=90");
-}
-
-.packagesHero {
-  background-image:
-    url("https://images.unsplash.com/photo-1519741347686-c1e331ec7f6e?auto=format&fit=crop&w=2200&q=90");
-}
-
 .aboutHero {
   background-image:
     url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=90");
@@ -669,367 +633,6 @@ select {
 
 
 /* =========================================================
-   PACKAGES PAGE
-========================================================= */
-
-.packagesSection {
-  padding: 100px 6%;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 15px;
-
-  background: var(--cream-dark);
-}
-
-
-/* PACKAGE CARD */
-
-.packageCard {
-  min-height: 420px;
-
-  padding: 38px 30px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  background: #faf7f2;
-}
-
-
-/* PACKAGE NUMBER */
-
-.packageCard > p:first-child {
-  font-family: "DM Sans", sans-serif;
-
-  color: #999;
-
-  font-size: 9px;
-
-  letter-spacing: 2px;
-}
-
-
-/* PACKAGE TITLE */
-
-.packageCard h3 {
-  margin-top: 28px;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 31px;
-
-  font-weight: 300;
-
-  line-height: 1.1;
-
-  letter-spacing: -1px;
-}
-
-
-/* PACKAGE DESCRIPTION */
-
-.packageCard > p:nth-child(3) {
-  margin-top: 20px;
-
-  flex: 1;
-
-  color: #555;
-
-  font-size: 12px;
-
-  font-weight: 300;
-
-  line-height: 1.8;
-}
-
-
-/* PACKAGE LINK */
-
-.packageCard a {
-  width: fit-content;
-
-  padding-bottom: 5px;
-
-  border-bottom: 1px solid currentColor;
-
-  font-size: 9px;
-
-  font-weight: 500;
-
-  letter-spacing: 1.5px;
-
-  text-transform: uppercase;
-}
-
-
-/* DARK PACKAGE */
-
-.darkPackage {
-  background: #101010;
-
-  color: white;
-}
-
-.darkPackage > p:nth-child(3) {
-  color: #aaa;
-}
-
-
-/* =========================================================
-   CONTACT PAGE
-========================================================= */
-
-.contactPage {
-  position: relative;
-
-  min-height: 100vh;
-
-  background: #101010;
-
-  color: white;
-}
-
-
-/* CONTACT LAYOUT */
-
-.contactContent {
-  min-height: 100vh;
-
-  padding: 160px 8% 80px;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  align-items: center;
-
-  gap: 100px;
-}
-
-
-/* CONTACT TEXT */
-
-.contactText h1 {
-  font-family: "Manrope", sans-serif;
-
-  font-size: clamp(55px, 6vw, 90px);
-
-  font-weight: 300;
-
-  line-height: 0.98;
-
-  letter-spacing: -4px;
-}
-
-.contactText > p:last-child {
-  max-width: 500px;
-
-  margin-top: 28px;
-
-  color: #aaa;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 13px;
-
-  font-weight: 300;
-
-  line-height: 2;
-}
-
-
-/* =========================================================
-   BOOKING FORM
-========================================================= */
-
-.bookingForm {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 18px;
-}
-
-
-/* INPUTS */
-
-.bookingForm input,
-.bookingForm select,
-.bookingForm textarea {
-  width: 100%;
-
-  padding: 17px 5px;
-
-  border: none;
-
-  border-bottom: 1px solid #555;
-
-  outline: none;
-
-  background: transparent;
-
-  color: white;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 12px;
-}
-
-
-/* PLACEHOLDERS */
-
-.bookingForm input::placeholder,
-.bookingForm textarea::placeholder {
-  color: #777;
-}
-
-
-/* SELECT */
-
-.bookingForm select {
-  cursor: pointer;
-}
-
-.bookingForm select option {
-  color: black;
-
-  background: white;
-}
-
-
-/* MESSAGE AREA */
-
-.bookingForm textarea {
-  min-height: 130px;
-
-  resize: vertical;
-}
-
-
-/* SUBMIT BUTTON */
-
-.bookingForm button {
-  margin-top: 18px;
-
-  padding: 17px;
-
-  border: 1px solid white;
-
-  background: white;
-
-  color: black;
-
-  cursor: pointer;
-
-  font-size: 9px;
-
-  font-weight: 600;
-
-  letter-spacing: 1.7px;
-
-  text-transform: uppercase;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-.bookingForm button:hover {
-  background: transparent;
-
-  color: white;
-}
-
-
-/* DISABLED SUBMIT */
-
-.bookingForm button:disabled {
-  opacity: 0.55;
-
-  cursor: not-allowed;
-}
-
-
-/* =========================================================
-   CONTACT DATE FIELD
-========================================================= */
-
-.formField {
-  display: flex;
-
-  flex-direction: column;
-}
-
-.formField label {
-  margin-bottom: 4px;
-
-  color: #777;
-
-  font-size: 9px;
-
-  font-weight: 500;
-
-  letter-spacing: 1.5px;
-
-  text-transform: uppercase;
-}
-
-
-/* =========================================================
-   SUCCESS MESSAGE
-========================================================= */
-
-.formSuccess {
-  margin-top: 10px;
-
-  padding: 18px 20px;
-
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  background: rgba(255, 255, 255, 0.04);
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 6px;
-
-  color: white;
-}
-
-.formSuccess strong {
-  font-size: 13px;
-
-  font-weight: 500;
-}
-
-.formSuccess span {
-  color: #aaa;
-
-  font-size: 12px;
-
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   ERROR MESSAGE
-========================================================= */
-
-.formError {
-  margin-top: 10px;
-
-  color: #d7a5a5;
-
-  font-size: 12px;
-}
-
-
-/* =========================================================
    GENERIC TEXT LINK
 ========================================================= */
 
@@ -1080,16 +683,6 @@ select {
     left: 6%;
   }
 
-  .packagesSection {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contactContent {
-    grid-template-columns: 1fr;
-
-    gap: 65px;
-  }
-
 }
 
 
@@ -1106,14 +699,14 @@ select {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 18px 4%;
+    padding: 14px 4%;
     flex-wrap: nowrap;
     gap: 10px;
   }
 
   .logo {
-    font-size: 14px;
-    letter-spacing: 2.5px;
+    width: 150px;
+    max-width: 44vw;
     flex-shrink: 0;
   }
 
@@ -1274,26 +867,6 @@ select {
   }
 
 
-  /* PACKAGES */
-
-  .packagesSection {
-    grid-template-columns: 1fr;
-
-    padding: 70px 5%;
-  }
-
-
-  /* CONTACT */
-
-  .contactContent {
-    padding: 135px 6% 70px;
-  }
-
-  .contactText h1 {
-    font-size: 52px;
-
-    letter-spacing: -2px;
-  }
 
 }
 
@@ -1303,8 +876,8 @@ select {
   }
 
   .logo {
-    font-size: 12px;
-    letter-spacing: 2px;
+    width: 132px;
+    max-width: 42vw;
   }
 
   .navLinks .navButton {
@@ -1314,17 +887,8 @@ select {
 
   .modernHeroContent h1,
   .pageHeroContent h1,
-  .contactText h1 {
-    font-size: 42px;
-    letter-spacing: -1.8px;
-  }
-
   .pageIntro h2 {
     font-size: 38px;
   }
 
-  .packageCard {
-    min-height: 360px;
-    padding: 28px 22px;
-  }
 }

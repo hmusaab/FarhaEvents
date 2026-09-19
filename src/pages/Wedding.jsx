@@ -1,4 +1,5 @@
 import { Navbar } from "../App";
+import "./Wedding.css";
 
 function Weddings() {
   return (

@@ -1,0 +1,187 @@
+/* CONTACT PAGE */
+
+.contactPage {
+  position: relative;
+  min-height: 100vh;
+  background: #101010;
+  color: white;
+}
+
+.contactContent {
+  min-height: 100vh;
+  padding: 160px 8% 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 100px;
+}
+
+.contactText h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(55px, 6vw, 90px);
+  font-weight: 300;
+  line-height: 0.98;
+  letter-spacing: -4px;
+}
+
+.contactDescription {
+  max-width: 500px;
+  margin-top: 28px;
+  color: #aaa;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.contactEmailPrompt {
+  margin-top: 24px;
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.contactEmail {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.contactEmail:hover {
+  border-color: white;
+  color: #ddd;
+}
+
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bookingForm input,
+.bookingForm select,
+.bookingForm textarea {
+  width: 100%;
+  padding: 17px 5px;
+  border: none;
+  border-bottom: 1px solid #555;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+}
+
+.bookingForm input::placeholder,
+.bookingForm textarea::placeholder {
+  color: #777;
+}
+
+.bookingForm select {
+  cursor: pointer;
+}
+
+.bookingForm select option {
+  color: black;
+  background: white;
+}
+
+.bookingForm textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.bookingForm button {
+  margin-top: 18px;
+  padding: 17px;
+  border: 1px solid white;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.bookingForm button:hover {
+  background: transparent;
+  color: white;
+}
+
+.bookingForm button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.formField label {
+  margin-bottom: 4px;
+  color: #777;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.formSuccess {
+  margin-top: 10px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: white;
+}
+
+.formSuccess strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.formSuccess span {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.formError {
+  margin-top: 10px;
+  color: #d7a5a5;
+  font-size: 12px;
+}
+
+@media (max-width: 1050px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contactContent {
+    padding: 135px 6% 70px;
+  }
+
+  .contactText h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 430px) {
+  .contactText h1 {
+    font-size: 42px;
+    letter-spacing: -1.8px;
+  }
+}
