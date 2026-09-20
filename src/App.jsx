@@ -7,7 +7,7 @@ import {
   Link,
   useLocation,
 } from "react-router-dom";
-import logoImage from "./images/FarhaEventsLogo.png";
+import logoImage from "./Images/FarhaEventsLogo.png";
 
 import VogueBox from "./pages/VogueBox";
 import Experience360 from "./pages/Experience360";
