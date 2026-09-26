@@ -7,6 +7,14 @@
   color: white;
 }
 
+.contactPage .navbar {
+  pointer-events: none;
+}
+
+.contactPage .navbar a {
+  pointer-events: auto;
+}
+
 .contactContent {
   min-height: 100vh;
   padding: 160px 8% 80px;
@@ -79,6 +87,12 @@
 .bookingForm input::placeholder,
 .bookingForm textarea::placeholder {
   color: #777;
+}
+
+.bookingForm input:focus,
+.bookingForm select:focus,
+.bookingForm textarea:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
 .bookingForm select {
@@ -169,6 +183,12 @@
 }
 
 @media (max-width: 700px) {
+  .bookingForm input,
+  .bookingForm select,
+  .bookingForm textarea {
+    font-size: 16px;
+  }
+
   .contactContent {
     padding: 135px 6% 70px;
   }

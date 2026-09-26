@@ -82,6 +82,9 @@ function Contact() {
             type="text"
             name="name"
             placeholder="Your Name"
+            autoComplete="name"
+            autoCapitalize="words"
+            aria-label="Your name"
             required
           />
 
